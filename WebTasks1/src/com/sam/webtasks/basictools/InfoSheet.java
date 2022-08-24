@@ -72,11 +72,11 @@ public class InfoSheet {
 
         contactTitle.setText("Name, address and contact details of investigators: ");
 
-        contactHTML.setHTML("Dr Annika Boldt and Dr Sam Gilbert<br>"
+        contactHTML.setHTML("Ms Ceri Ngai and Dr Sam Gilbert<br>"
                 + "Institute of Cognitive Neuroscience<br>"
                 + "17 Queen Square<br>"
                 + "London WC1N 3AR<br><br>"
-                + "<a href=\"mailto:a.boldt@ucl.ac.uk\">a.boldt@ucl.ac.uk</a> and "
+                + "<a href=\"mailto:yan.ngai.21@ucl.ac.uk\">yan.ngai.21@ucl.ac.uk</a> and "
                 + "<a href=\"mailto:sam.gilbert@ucl.ac.uk\">sam.gilbert@ucl.ac.uk</a><br>");
 
         infoHTML.setHTML(infoText);

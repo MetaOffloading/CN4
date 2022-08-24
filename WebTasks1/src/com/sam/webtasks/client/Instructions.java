@@ -16,8 +16,8 @@ public class Instructions {
                     + "the link from the Prolific website. You "
                     + "will not receive any compensation otherwise."
                     + "<br><br>Please close any programs "
-                    + "that could cause distraction (e.g. email clients) and "
-                    + "maximise the size of this window.<br><br>This experiment will take "
+                    + "that could cause distraction (e.g. email clients) before starting.<br><br>"
+                    + "This experiment will take "
                     + "approximately 20 minutes. Please only continue when you think "
                     + "you will be free from distractions for the next 20 minutes.<br><br>"
                     + "As compensation for completing "
@@ -60,15 +60,17 @@ public class Instructions {
             break;
         case 3:
 			i = "Well done. Now it will get more difficult.<br><br>There will be a total of 15 "
-	        			+ "circles and 7 of them will be special ones that should go to one of the "
+	        			+ "circles and " + Params.nTargets + " of them will be special ones that should go to one of the "
 	        			+ "coloured sides of the box.<br><br> "
 	        			+ "Don't worry if you do not remember all of them. That's fine - "
 	        			+ "just try to remember as many as you can.<br><br>"
-	        			+ "Click below to practise the task.";
+	        			+ "From now on, a little timer will indicate how much time you have left to " 
+	        			+ "move all the circles. Please try to complete the trial before the timer runs out."
+	        			+ "<br><br>Click below to practise the task.";
             break;
         case 4:
-        	i="Now that you have had some practice with the experiment, we would like you to tell us "
-                    + "how <b>confident</b> you are that you can accurately perform the task.<br><br>"
+        	i="You have now completed this set of practice trials.<br><br>Before continuing, we would like you to tell us "
+                    + "how <b>confident</b> you are that you can accurately perform the task for the rest of the experiment.<br><br>"
                     + "Please use the scale below to indicate what percentage of "
                     + "the special circles you can correctly drag to the instructed side of the square, on average. 100% "
                     + "would mean that you always get every single one correct. 0% would mean that you can never "
@@ -147,8 +149,16 @@ public class Instructions {
 					+ "how confidence in your own memory might guide your decision to ask for "
 					+ "a reminder.<br><br>"
 					+ "Please click on the link below to receive your payment:<br><br>"
-					+ "<b><a href=\"https://app.prolific.co/submissions/complete?cc=4DC3A396\">"
+					+ "<b><a href=\"https://app.prolific.co/submissions/complete?cc=\">"
 					+ "CLICK HERE</a></b>";
+			break;
+        case 11:
+        	i="Last of all, we would like to ask you one last time about your <b>confidence</b> Suppose you had to do the "
+					+ "task again using your <b>own memory</b>, without being able to use reminders. "
+					+ "What percentage of the special circles do you think you would be "
+					+ "able to correctly drag to the instructed side of the square, on average? 100% would mean that you always "
+					+ "get every single one correct. 0% would mean that you could never get any of them correct.<br><br>Please "
+					+ "remember that you should just answer about your ability to do the task with your <b>own memory</b>.";
 			break;
 		}
 
@@ -189,8 +199,7 @@ public class Instructions {
                 + "It will not be possible to identify you from these data.<br><br>"
                 + "We aim to publish the results of this project in scientific journals and book chapters. Copies of the "
                 + "results can either be obtained directly from the scientific journals' websites or from us.<br><br>"
-                + "Should you wish to raise a complaint, please contact the Investigator of this project, "
-                + "Dr Annika Boldt (<a href=\"mailto:a.boldt@ucl.ac.uk\">a.boldt@ucl.ac.uk</a>), or the Principal Investigator "
+                + "Should you wish to raise a complaint, please contact the Principal Investigator "
                 + "Dr Sam Gilbert (<a href=\\\"mailto:sam.gilbert@ucl.ac.uk\\\">sam.gilbert@ucl.ac.uk</a>). However, "
                 + "if you feel your complaint has not been handled to your satisfaction, please be aware that you can "
                 + "also contact the Chair of the UCL Research Ethics Committee (<a href=\"mailto:ethics@ucl.ac.uk\">ethics@ucl.ac.uk</a>).");

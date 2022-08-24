@@ -137,7 +137,6 @@ public class IOtask2RunTrial {
 		final VerticalPanel lienzoWrapper = new VerticalPanel();
 
 		// timer display
-
 		final VerticalPanel timerWrapper = new VerticalPanel();
 		timerWrapper.setWidth(boxSize + "px");
 		timerWrapper.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
@@ -891,7 +890,7 @@ public class IOtask2RunTrial {
 				});
 
 		circleGroup[0].setDraggable(true);
-
+		
 		panel.add(circleLayer);
 		circleLayer.draw();
 	}
