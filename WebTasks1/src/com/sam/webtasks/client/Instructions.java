@@ -149,7 +149,7 @@ public class Instructions {
 					+ "how confidence in your own memory might guide your decision to ask for "
 					+ "a reminder.<br><br>"
 					+ "Please click on the link below to receive your payment:<br><br>"
-					+ "<b><a href=\"https://app.prolific.co/submissions/complete?cc=\">"
+					+ "<b><a href=\"https://app.prolific.co/submissions/complete?cc=CXSJVPF6\">"
 					+ "CLICK HERE</a></b>";
 			break;
         case 11:
