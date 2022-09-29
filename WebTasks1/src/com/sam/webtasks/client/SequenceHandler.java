@@ -68,11 +68,13 @@ public class SequenceHandler {
 			 * The code here defines the main sequence of events in the experiment *
 			 **********************************************************************/
 			case 1:
+				/*
 				if (Counterbalance.getFactorLevel("feedback")==ExtraNames.FEEDBACK) {
 					Window.alert("You are in the feedback condition");
 				} else {
 					Window.alert("You are in the no-feedback condition");
 				}
+				*/
 				
 				ClickPage.Run(Instructions.Get(0), "Next");
 				break;
