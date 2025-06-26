@@ -230,15 +230,21 @@ public class SequenceHandler {
 				break;
 			case 26:
 				ProgressBar.Hide();
-				Slider.Run(Instructions.Get(11), "0%", "100%");
+				Slider.Run(Instructions.Get(12), "0%", "100%");
 				
 				break;
 			case 27:
-				PHP.logData("slider2", ""+Slider.getSliderValue(), true);
+				PHP.logData("hindsight", ""+Slider.getSliderValue(), true);
+				break;
+			case 28:
+				Slider.Run(Instructions.Get(11), "0%", "100%");
 				
 				break;
+			case 29:
+				PHP.logData("slider2", ""+Slider.getSliderValue(), true);
 				
-			case 28:
+				break;		
+			case 30:
 				// log data and check that it saves
 				String data = TimeStamp.Now() + ",";
 				data = data + SessionInfo.participantID + ",";
@@ -250,7 +256,7 @@ public class SequenceHandler {
 				PHP.UpdateStatus("finished");
 				PHP.logData("finish", data, true);
 				break;
-			case 29:
+			case 31:
 				ClickPage.Run(Instructions.Get(10), "nobutton");
 				break;
 			}
@@ -411,7 +417,7 @@ public class SequenceHandler {
 		case 4: //practice IOtask2 loop, forced internal condition, potentially with metacognitive feedback
 			switch (sequencePosition.get(4)) {
 			case 1:
-				if (Counterbalance.getFactorLevel("feedback") == ExtraNames.FEEDBACK) {
+				if (Counterbalance.getFactorLevel("feedback") > 0) {
 					Slider.Run("Before the next practice trial, we would like you to tell us "
 		                    + "how <b>confident</b> you are that you can accurately perform the task.<br><br>"
 		                    + "Please use the scale below to indicate what percentage of "
@@ -421,7 +427,7 @@ public class SequenceHandler {
 					break;
 				}
 			case 2:
-				if (Counterbalance.getFactorLevel("feedback") == ExtraNames.FEEDBACK) {
+				if (Counterbalance.getFactorLevel("feedback") > 0) {
 					PHP.logData("internalPrediction", ExtraNames.blockNum + "," + Slider.getSliderValue(), true);
 				} else {
 					SequenceHandler.Next();
@@ -440,17 +446,19 @@ public class SequenceHandler {
 				trainIntBlock.Run();
 				break;
 			case 4:
-				if (Counterbalance.getFactorLevel("feedback") == ExtraNames.FEEDBACK) {
+				if (Counterbalance.getFactorLevel("feedback") > 1) {
 					int percentCorrect = (int) (100 * (IOtask2BlockContext.getnHits() / (float) (Params.nTargets)));
 
 					String feedbackMessage = "";
 
-					if (percentCorrect < Slider.getSliderValue()) {
-						feedbackMessage = "You overestimated your memory ability.";
-					} else if (percentCorrect > Slider.getSliderValue()) {
-						feedbackMessage = "You underestimated your memory ability.";
-					} else {
-						feedbackMessage = "You accurately estimated your memory ability.";
+					if (Counterbalance.getFactorLevel("feedback") > 2) {
+						if (percentCorrect < Slider.getSliderValue()) {
+							feedbackMessage = "<b>You overestimated your memory ability.</b>";
+						} else if (percentCorrect > Slider.getSliderValue()) {
+							feedbackMessage = "<b>You underestimated your memory ability.</b>";
+						} else {
+							feedbackMessage = "You accurately estimated your memory ability.";
+						}
 					}
 
 					ClickPage.Run("You predicted that you would get " + Slider.getSliderValue() + "% correct.<br><br> You actually got " 

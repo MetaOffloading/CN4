@@ -67,16 +67,16 @@ public class InfoSheet {
 
         projectTitleText.setText("Title of project: Online response time studies of attention and memory");
 
-        approvalHTML.setHTML("This study has been approved by the UCL Research Ethics Committee "
-                + "as Project ID Number: 1584/003");
+        approvalHTML.setHTML("Please scroll to the bottom to view all content.<br><br>"
+        		+ "This study has been approved by the UCL Research Ethics Committee "
+                + "as Project ID Number: ICN-VW-28-22-2023");
 
         contactTitle.setText("Name, address and contact details of investigators: ");
 
-        contactHTML.setHTML("Ms Ceri Ngai and Dr Sam Gilbert<br>"
+        contactHTML.setHTML("Professor Sam Gilbert<br>"
                 + "Institute of Cognitive Neuroscience<br>"
                 + "17 Queen Square<br>"
                 + "London WC1N 3AR<br><br>"
-                + "<a href=\"mailto:yan.ngai.21@ucl.ac.uk\">yan.ngai.21@ucl.ac.uk</a> and "
                 + "<a href=\"mailto:sam.gilbert@ucl.ac.uk\">sam.gilbert@ucl.ac.uk</a><br>");
 
         infoHTML.setHTML(infoText);

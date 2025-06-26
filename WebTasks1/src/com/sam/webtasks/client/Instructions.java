@@ -153,13 +153,25 @@ public class Instructions {
 					+ "CLICK HERE</a></b>";
 			break;
         case 11:
-        	i="Last of all, we would like to ask you one last time about your <b>confidence</b> Suppose you had to do the "
+        	i="Last of all, we would like to ask you one last time about your <b>confidence</b>. Suppose you had to do the "
 					+ "task again using your <b>own memory</b>, without being able to use reminders. "
 					+ "What percentage of the special circles do you think you would be "
 					+ "able to correctly drag to the instructed side of the square, on average? 100% would mean that you always "
 					+ "get every single one correct. 0% would mean that you could never get any of them correct.<br><br>Please "
 					+ "remember that you should just answer about your ability to do the task with your <b>own memory</b>.";
 			break;
+        case 12:
+        	i="Remember that we asked you this question at the beginning of the experiment:<br><br>"
+        			+ "<i>You have now completed this set of practice trials.<br><br>Before continuing, we would like you to tell us "
+                    + "how <b>confident</b> you are that you can accurately perform the task for the rest of the experiment.<br><br>"
+                    + "Please use the scale below to indicate what percentage of "
+                    + "the special circles you can correctly drag to the instructed side of the square, on average. 100% "
+                    + "would mean that you always get every single one correct. 0% would mean that you can never "
+                    + "get any of them correct.</i><br><br>"
+                    + "We would now like you to recall the answer that you originally gave to this question. Please tell us "
+                    + "what answer you gave to this question when we asked you at the beginning of the experiment.<br><br>"
+                    + "Please tell us what you said originally <b>NOT</b> how well you think you actually did in the experiment.";
+        	break;
 		}
 
 		return(i);	
