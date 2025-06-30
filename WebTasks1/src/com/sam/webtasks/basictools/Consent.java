@@ -31,7 +31,7 @@ public class Consent {
 				+ "an opportunity to consider the information and what will be expected of me. "
 				+ "I have also had the opportunity to contact the researcher to ask questions "
 				+ "and discuss the study";
-		labels[1] = "I uderstand that I will be able to withdraw my data up to 4 weeks after "
+		labels[1] = "I understand that I will be able to withdraw my data up to 4 weeks after "
 				+ "participating, by contacting the Principal Researcher";
 		labels[2] = "I consent to participate in the study. I understand that my personal information "
 				+ "(my Prolific ID code) will be used for the purposes explained to me. I understand "
