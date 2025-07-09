@@ -16,7 +16,7 @@ public class SessionInfo {
 	public static String experimentCode="CN4";
 	
 	//which version of the experiment is this?
-	public static int experimentVersion=1;
+	public static int experimentVersion=2;
 	
 	//what is the minimum permitted screen size in pixels?
 	//if the screen is smaller than this the participant will be asked
@@ -41,7 +41,7 @@ public class SessionInfo {
 	//NB levels range from 0 to (maximum - 1)
 	public static String[] counterbalanceFactors = {"counterbtargetvals","feedback"};
 	public static int[] counterbalanceLevels = {2,4};
-	public static int[] specifiedLevels = {-1,-1};
+	public static int[] specifiedLevels = {-1,0};
 	
 	/*************************************************/
     /* no need to edit the settings below this point */

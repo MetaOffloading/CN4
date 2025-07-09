@@ -68,6 +68,11 @@ public class SequenceHandler {
 			 * The code here defines the main sequence of events in the experiment *
 			 **********************************************************************/
 			case 1:
+				if (Counterbalance.getFactorLevel("feedback")==0) {
+					Counterbalance.setFactorLevel("feedback", 1);
+				} else {
+					Counterbalance.setFactorLevel("feedback", 3);
+				}
 				/*
 				if (Counterbalance.getFactorLevel("feedback")==ExtraNames.FEEDBACK) {
 					Window.alert("You are in the feedback condition");
@@ -425,7 +430,10 @@ public class SequenceHandler {
 		                    + "would mean that you always get every single one correct. 0% would mean that you can never "
 		                    + "get any of them correct.", "0%", "100%");
 					break;
+				} else {
+					SequenceHandler.Next();
 				}
+				break;
 			case 2:
 				if (Counterbalance.getFactorLevel("feedback") > 0) {
 					PHP.logData("internalPrediction", ExtraNames.blockNum + "," + Slider.getSliderValue(), true);
